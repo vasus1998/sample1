@@ -4,17 +4,21 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) {
-        // Првое задание
+    public static void firstExample() {
         String firstNumber = "1";
         String secondNumber = "2";
         String thirdNumber = "3";
         System.out.println(firstNumber + " " + secondNumber + " " + thirdNumber);
-        // второе задание
+    }
+
+    public static void secondExamole(){
         Scanner scanner = new Scanner(System.in);
         String number = scanner.nextLine();
         System.out.println("Ваше число:" + number);
-        // Третье задание
+    }
+
+    public static void thirdExample(){
+        Scanner scanner = new Scanner(System.in);
         System.out.print("Введите длину: ");
         double length = scanner.nextDouble();
         System.out.print("Введите ширину: ");
@@ -23,7 +27,10 @@ public class Main {
         double diagonal = Math.sqrt((length * length) + (width * width));
         System.out.println("Периметр прямоугольника равен: " + perimeter);
         System.out.println("Длина диагонали равна: " + diagonal);
-        //Четвертое задание
+    }
+
+    public static void fourthExample(){
+        Scanner scanner = new Scanner(System.in);
         System.out.print("Введите первое число: ");
         double theFirstNumber = scanner.nextDouble();
         System.out.print("Введите второе число: ");
@@ -35,7 +42,10 @@ public class Main {
         } else if (theFirstNumber == theSecondNumber) {
             System.out.println("Числа равны");
         }
-        //Пятое задание
+    }
+
+    public static void fifthExample(){
+        Scanner scanner = new Scanner(System.in);
         System.out.print("Введите первое число: ");
         double num1 = scanner.nextDouble();
         System.out.print("Введите второе число: ");
@@ -70,6 +80,19 @@ public class Main {
         if (!error) {
             System.out.println(num1 + " " + operator + " " + num2 + " = " + ans);
         }
+    }
+
+    public static void main(String[] args) {
+        firstExample();
+
+        secondExamole();
+
+        thirdExample();
+
+        fourthExample();
+
+        fifthExample();
+
 
     }
 }
