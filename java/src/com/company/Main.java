@@ -19,10 +19,11 @@ public class Main {
         double length = scanner.nextDouble();
         System.out.print("Введите ширину: ");
         double width = scanner.nextDouble();
-        double perimetr = 2 * (length + width);
+        double perimeter = 2 * (length + width);
         double diagonal = Math.sqrt((length * length) + (width * width));
-        System.out.println("Периметр прямоугольника равен: " + perimetr);
+        System.out.println("Периметр прямоугольника равен: " + perimeter);
         System.out.println("Длина диагонали равна: " + diagonal);
+        //Четвертое задание
         System.out.print("Введите первое число: ");
         double theFirstNumber = scanner.nextDouble();
         System.out.print("Введите второе число: ");
@@ -34,16 +35,16 @@ public class Main {
         } else if (theFirstNumber == theSecondNumber) {
             System.out.println("Числа равны");
         }
-        // Четвертое задание
+        //Пятое задание
         System.out.print("Введите первое число: ");
         double num1 = scanner.nextDouble();
         System.out.print("Введите второе число: ");
         double num2 = scanner.nextDouble();
         System.out.print("Введите действие(*+/-): ");
-        String deistvie = scanner.next();
+        String operator = scanner.next();
         double ans = 0;
         boolean error = false;
-        switch (deistvie) {
+        switch (operator) {
             case "+":
                 ans = num1 + num2;
                 break;
@@ -62,11 +63,12 @@ public class Main {
                 }
                 break;
             default:
-                System.out.println("Ошибка!");
+                error = true;
+                System.out.println("Ошибка! Операция пока не поддерживается");
                 break;
         }
         if (!error) {
-            System.out.println(num1 + " " + deistvie + " " + num2 + " = " + ans);
+            System.out.println(num1 + " " + operator + " " + num2 + " = " + ans);
         }
 
     }
