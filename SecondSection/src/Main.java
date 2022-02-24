@@ -14,7 +14,7 @@ public class Main {
         System.out.print("Введите переменную: mark = ");
         double mark = scanner.nextDouble();
         if (mark < 60){
-            mark = mark * 0.1;
+            mark += mark * 0.1;
             System.out.println("Щас увеличим");
         } else {
             System.out.println("Она и так большая " + mark);
