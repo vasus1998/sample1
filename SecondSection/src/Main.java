@@ -1,9 +1,11 @@
 import java.util.Scanner;
 
+
 public class Main {
 
+    private static final Scanner scanner = new Scanner(System.in);
+
     public static void firstExample() {
-        Scanner scanner = new Scanner(System.in);
         System.out.print("Введите переменную: avg = ");
         double avg = scanner.nextDouble();
         if (avg == 100){
@@ -52,7 +54,6 @@ public class Main {
     }
 
     public static void secondExample() {
-        Scanner scanner = new Scanner(System.in);
         System.out.print("Input first number: ");
         double firstNumber = scanner.nextDouble();
         System.out.print("Input second number");
@@ -65,7 +66,6 @@ public class Main {
     }
 
     public static void thirdExample() {
-        Scanner scanner = new Scanner(System.in);
         System.out.print("Введите переменную: ");
         double number = scanner.nextDouble();
         if (number < 0){
@@ -77,7 +77,6 @@ public class Main {
     }
 
     public static void fourthExample(){
-        Scanner scanner = new Scanner(System.in);
         System.out.print("Введите переменную 1 : ");
         double firstNumber = scanner.nextDouble();
         System.out.print("Введите переменную 2 : ");
@@ -98,7 +97,6 @@ public class Main {
     }
 
     public static void fifthExample(){
-        Scanner scanner = new Scanner(System.in);
         System.out.print("Введите переменную : ");
         double num = scanner.nextDouble();
         if (num < 0){
@@ -109,7 +107,6 @@ public class Main {
     }
 
     public static void sixthExample(){
-        Scanner scanner = new Scanner(System.in);
         System.out.print("Введите двузначное число : ");
         int number = scanner.nextInt();
         int secondNumber = number % 10;
@@ -124,7 +121,6 @@ public class Main {
     }
 
     public static void seventhExample(){
-        Scanner scanner = new Scanner(System.in);
         System.out.print("Введите трехзначное число : ");
         int number = scanner.nextInt();
         int thirdNumber = number % 10;
