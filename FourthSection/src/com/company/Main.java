@@ -4,14 +4,15 @@ import java.util.Scanner;
 
 public class Main {
 
-
+    private static final Scanner scanner = new Scanner(System.in);
     public static int first(int number) {
         return Integer.compare(number, 0);
     }
 
     public static int second(int number) {
         int counter = 0;
-        for (int i = number; i < (2 * number); i++) {
+        int multiply = 2;
+        for (int i = number; i < (multiply * number); i++) {
             for (int j = 1; j < i; j++) {
                 if (i % j == 0) {
                     counter++;
@@ -47,10 +48,15 @@ public class Main {
     }
 
     public static double fifth(int ax, int ay, int bx, int by) {
-        return Math.sqrt(Math.pow((ax - bx), 2) + Math.pow((ay - by), 2));
+        int power = 2;
+        return Math.sqrt(Math.pow((ax - bx), power) + Math.pow((ay - by), power));
     }
 
-    public static int sixth(int ax, int ay) {
+    public static int sixth() {
+        System.out.print("Input A(x) = ");
+        int ax = scanner.nextInt();
+        System.out.print("Input A(y) = ");
+        int ay = scanner.nextInt();
         if (ax > 0 && ay > 0) return 1;
         if (ax < 0 && ay > 0) return 2;
         if (ax < 0 && ay < 0) return 3;
@@ -58,19 +64,30 @@ public class Main {
         return -1;
     }
 
-    public static String seventh(int ax, int ay, int bx, int by, int radius) {
-        double length = Math.sqrt(Math.pow((ax - bx), 2) + Math.pow((ay - by), 2));
+    public static String seventh() {
+        System.out.print("Input A(x) = ");
+        int ax = scanner.nextInt();
+        System.out.print("Input A(y) = ");
+        int ay = scanner.nextInt();
+        System.out.print("Input B(x) = ");
+        int bx = scanner.nextInt();
+        System.out.print("Input B(y) = ");
+        int by = scanner.nextInt();
+        System.out.print("Input radius = ");
+        int radius = scanner.nextInt();
+        double length = fifth(ax, ay, bx, by);
+        //double length = Math.sqrt(Math.pow((ax - bx), 2) + Math.pow((ay - by), 2));
         return (length > radius) ? "Точка вне круга" : "Точка в круге";
     }
 
     public static void main(String[] args) {
-        System.out.println(Main.first(-66));
-        System.out.println(Main.second(34));
-        System.out.println(Main.third(23, 2));
-        System.out.println(Main.fourth(12));
-        System.out.println(Main.fifth(12,-15, 24, 12));
-        System.out.println(Main.sixth(33, 332));
-        System.out.println(Main.seventh(33,33,33,33,44));
+        System.out.println(first(-66));
+        System.out.println(second(34));
+        System.out.println(third(23, 2));
+        System.out.println(fourth(12));
+        System.out.println(fifth(12,-15, 24, 12));
+        System.out.println(sixth());
+        System.out.println(seventh());
     }
-
+    // Добавить ввод данных
 }
